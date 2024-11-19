@@ -25,7 +25,7 @@ int main(){
 		cin.ignore(10,'\n');   //檔案的最後有一個換行符
 		i=-1;
 		flag1=0;
-		while(instruction[++i]!='\0'&&flag1!=1){
+		while(instruction[++i]!='\0' && flag1!=1){
 			switch(instruction[i]){
 				case 'R':{
 					if(orient=='N')	orient = 'E';
