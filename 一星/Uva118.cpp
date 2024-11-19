@@ -18,7 +18,7 @@ int main(){
 	string instruction;
 	cin>>upper_rightX>>upper_rightY;
 
-	while(cin.peek()!=EOF){		//讀到EOF之後要再讀一次電腦才會發覺檔案讀完,因此用peek()
+	while(cin.peek() != EOF){		//讀到EOF之後要再讀一次電腦才會發覺檔案讀完,因此用peek()
       
 		cin>>X>>Y>>orient;
 		cin>>instruction;
