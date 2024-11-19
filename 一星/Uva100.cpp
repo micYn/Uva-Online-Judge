@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//i j的大小順序是不一定的！！
+//i j的大小順序是不一定的！
 int func(long long n){
 	int count=1;
 	while(n!=1){
