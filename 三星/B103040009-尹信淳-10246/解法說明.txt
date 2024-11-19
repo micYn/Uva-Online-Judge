@@ -1,0 +1,17 @@
+公式:
+x + 起點到n的普通最短路徑長(可經過的節點受限制)
+  + n到終點的普通最短路徑長(可經過的節點受限制)
+
+(1) 對graph做V次不同限制的floyd-warshall(V為節點數量)
+
+(2) 收到一組新的起點終點(i, j)，
+    (2.1) 找出可能是i, j最短路徑中最高權重點的點(A集合) 
+    (2.2) shortestDis = INT_MAX
+                         for each node n in A
+                                tmp = weight(n)+D[n][i][n]+D[n][n][j] 
+                                if( tmp < shortestDis )
+                                     shortestDis = tmp
+
+(3) 輸出shortestDis，若接著是新的graph，回(1)；
+                             新的起終點，回(2)
+

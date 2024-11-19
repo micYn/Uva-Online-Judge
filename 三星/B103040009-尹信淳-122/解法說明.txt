@@ -1,0 +1,10 @@
+此題輸入為連續好幾棵樹，每一顆樹都要判斷是否'complete'，若complete則對樹進行level-order traversal；反之則輸出"not complete"。
+
+依據輸入，一個node一個node建立起簡易的tree，並在建立的過程中就檢查有沒有重複給值的node。
+
+而在add某個node的過程中可能會需要加上其他node，例如加入(4,L)時，若root還沒建立，則需要先加上root才能加上(4,L)，此時我將root的value設為-1，如此一來在檢查有沒有node是沒有被給值的時候，就可以用"樹上有沒有值是-1的節點"來判斷。
+
+到這時已經能正確建立起tree，且能正確判斷complete or not complete，問題只剩下tree的level-order traversal ，這個問題用queue即可達成。
+
+
+

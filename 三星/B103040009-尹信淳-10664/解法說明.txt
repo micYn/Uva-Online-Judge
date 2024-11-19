@@ -1,0 +1,5 @@
+這是UVa10664的解法說明。
+此題可用DP求解:
+dp[n][m]若為true則代表前n個suitcase能夠湊出重量m.
+
+dp[n][m] = dp[n-1][m] or dp[n-1][m-w[n]]

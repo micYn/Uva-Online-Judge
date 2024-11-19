@@ -1,0 +1,1 @@
+maintain一個vector，每次都sort，然後找median輸出。

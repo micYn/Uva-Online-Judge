@@ -1,0 +1,18 @@
+這是UVa10081的解題說明。
+要計算percentage of tight words of length n over alphabets{0,1,...k}，需要兩個數字:
+一，總共有多少種word的可能性?
+	每個位數皆有0~k種可能 => 總共(k+1)^n種可能性
+
+二，其中有多少種tight word的可能性?
+	這部分可用dynamic programming解決:
+
+	dp[i][j]表示第i位放數字j的可能性有多少種，0<=j<=k，
+
+	dp[i][j] = dp[i-1][j-1] + dp[i-1][j] + dp[i-1][j+1]
+
+	(如果上一位數字為j，則下一位數字則只能放j-1 or j or j+1三種數字。)
+
+兩數字相除即可得到percentage.
+
+	
+	

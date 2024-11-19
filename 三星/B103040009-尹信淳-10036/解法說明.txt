@@ -1,0 +1,8 @@
+此為UVa10036的解法說明。
+
+dp[n][m]代表前n個數字加加減減能弄出餘數為m是否可能
+dp[n][m] = dp[n-1][abs((m+integers[n])%K)] | dp[n-1][abs((m+K-integers[n])%K)]
+
+記得加abs，C++中負數取餘數會是負的。
+
+另外，dp[0][0]=true,dp[0][1~K-1]=false

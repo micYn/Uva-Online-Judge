@@ -1,0 +1,2 @@
+此為UVa10810的解法說明，會運用divide & conquer來解決此問題。
+需要swap的次數即為sequence的inversion數，可運用merge sort當作模板，在過程中記錄inversion量。經典的count inversion問題。注意計算次數的變數要用long long，因為可會很大。
